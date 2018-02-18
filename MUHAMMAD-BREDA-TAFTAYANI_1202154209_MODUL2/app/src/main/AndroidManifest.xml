@@ -19,7 +19,14 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".dinein" />
         <activity android:name=".TakeAway" />
-        <activity android:name=".Menu"></activity>
+        <activity android:name=".Menu" />
+        <activity android:name=".DetailMenu"
+            android:parentActivityName=".Menu">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"
+            />
+        </activity>
     </application>
 
 </manifest>

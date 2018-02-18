@@ -7,10 +7,11 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class dinein extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
-    private String messageSpin="";
+//    private String messageSpin="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,8 +33,8 @@ public class dinein extends AppCompatActivity implements AdapterView.OnItemSelec
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        messageSpin=adapterView.getItemAtPosition(i).toString();
-        YourOrder(view);
+//        messageSpin=adapterView.getItemAtPosition(i).toString();
+//        YourOrder(view);
 
     }
 
@@ -44,6 +45,8 @@ public class dinein extends AppCompatActivity implements AdapterView.OnItemSelec
 
     public void YourOrder(View view) {
         Intent intent=new Intent(this,Menu.class);
+        Toast.makeText(getApplicationContext(),"Welcome to dine",Toast.LENGTH_SHORT).show();
         startActivity(intent);
+
     }
 }

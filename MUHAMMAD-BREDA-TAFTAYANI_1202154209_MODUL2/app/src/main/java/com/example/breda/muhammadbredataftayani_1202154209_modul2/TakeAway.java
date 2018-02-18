@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class TakeAway extends AppCompatActivity {
 
@@ -16,6 +17,7 @@ public class TakeAway extends AppCompatActivity {
 
     public void TakeAway(View view) {
         Intent intent=new Intent(this,Menu.class);
+        Toast.makeText(getApplicationContext(),"Take away, have a nice day",Toast.LENGTH_SHORT).show();
         startActivity(intent);
     }
 }
